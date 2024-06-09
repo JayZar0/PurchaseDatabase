@@ -21,6 +21,6 @@ public class Start extends Application
         // set scene
         // stage show
 
-        //start all the network sockets here
+        //start all the network and database dependencies here
     }
 }

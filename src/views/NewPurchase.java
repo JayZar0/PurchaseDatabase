@@ -18,6 +18,7 @@ import java.util.ResourceBundle;
  */
 public class NewPurchase implements Initializable
 {
+    //FXML variables
     @FXML
     private TextField txtAmount;
     @FXML
@@ -30,6 +31,17 @@ public class NewPurchase implements Initializable
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle)
     {
-        cboType.getItems().addAll("Cash", "Debit", "Mastercard", "Visa", "American Express");
+        //combo box items
+        cboType.getItems().addAll("Debit", "Mastercard", "Visa", "American Express");
+
+        cmdClear.setOnAction(e -> {
+            //clear all the fields in the form
+            txtAmount.clear();
+            cboType.setValue("");
+        });
+
+        cmdConfirm.setOnAction(e -> {
+            //add items into the database
+        });
     }
 }
